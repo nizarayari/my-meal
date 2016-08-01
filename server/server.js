@@ -21,7 +21,7 @@ app.use(express.static('./client'));
 
 
 // Routing
-// app.use('/api/user', routesUser);
+app.use('/api/user', routesUser);
 // app.use('/api/event', routesEvent);
 
 
