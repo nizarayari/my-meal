@@ -3,7 +3,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const env = 'development';
 const config = require('../../sqlConfig.js')[env];
-const dummy = require ('./dummy')
+const dummy = require('./dummy');
 
 const sequelize = new Sequelize(config.database, config.user, config.password, config.connection);
 
@@ -187,9 +187,7 @@ sequelize
   .sync({ force: true })
   .then(function () {
     console.log('Created tables from schema');
-    dummy.init()
-
-
+    dummy.init();
   });
 
 exports.User = User;
